@@ -29,3 +29,25 @@ for(i=1;i<=10; i++)
         
     }
     };
+
+
+    // print.stdout.write vs console.log()
+
+for (let i = 0; i < 3; i++) {
+  console.log("X");
+}
+/* 
+Output:
+X
+X
+X
+*/
+
+for (let i=0 ; i<3; i++)
+{
+    process.stdout.write("X");
+}
+/* 
+Output:
+XXX
+*/

@@ -78,21 +78,7 @@ Odd value 9
 // return Statment :  It stops the loop, skips any code below the loop, and passes a final value back to whoever called 
 // the function.
 
-
-// Example 1: 
-// for(let i=1;i<=10;i++)
-// {
-//     console.log(i);
-//    if(i==4){
-//     return;
-//     console.log("Current value of i");
-//     }
-// console.log("i value", i );
-// };
-// console.log("loop exit after i", i);
-
- 
-// example 2: 
+// example 1: 
 
 function testStatus(){
     console.log("hello before return");
@@ -102,10 +88,7 @@ function testStatus(){
 
 console.log(testStatus());
 
-
-
-
-// example 3
+// example 2
 
 function addition(a, b){
     return a + b;
@@ -113,12 +96,23 @@ function addition(a, b){
 let calculate = addition(10,15);
 console.log(calculate);
 
-
-// Example 4 : strict keyword 
+// Example 3: strict keyword 
 
 function addNumbers(num1, num2) {      // this line does 2 thing declare fcuntion and initalize also , so it recognize when called in log console 
 
     return num1 + num2; 
 }
 console.log(addNumbers(15, 25));
+
+// Example 1:   will throw error
+for(let i=1;i<=10;i++)
+{
+    console.log(i);
+   if(i==4){
+    return;
+    console.log("Current value of i");
+    }
+console.log("i value", i );
+};
+console.log("loop exit after i", i);
 
