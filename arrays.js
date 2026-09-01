@@ -1,5 +1,4 @@
 // create an array 
-
 let fruits = ["apple", "orange", "pineapple", "banana"];
 // to get all elements in Array
 console.log(fruits);                                  //Output : [ 'apple', 'orange', 'pineapple', 'banana' ]
@@ -88,9 +87,104 @@ let arr = [true, 25, "hello"];
 console.log(arr);                                     // [ true, 25, 'hello' ]
 
 
+//1 Sep
+let fruitsList = ["Apple", "Banana", "Cherry", "Date", "Elderberry"];
+// slice
+console.log(fruitsList.slice(1,4));                               // [ 'Banana', 'Cherry', 'Date' ]
+console.log(fruitsList);                                         // [ 'Apple', 'Banana', 'Cherry', 'Date', 'Elderberry' ]
+
+//Splice = delete & insert 
+let newFruitList = fruitsList.splice(1,2, "Mango");
+console.log(newFruitList);                                     // deleted [ 'Banana', 'Cherry' ]
+console.log(fruitsList);                                       // new array [ 'Apple', 'Mango', 'Date', 'Elderberry' ]
+
+
+let text = "Yellow, Green,Red, Blue , Purple, Pink";
+// Split
+let textSplit = text.split(",");
+console.log(textSplit);                                       // [ 'Yellow', ' Green', 'Red', ' Blue ', ' Purple', ' Pink' ]
+
+
+// Merge Array with different methods
+
+let fruitsArr = ["Apple", "Banana", "Cherry"];
+let veggisArr = ["Peas", "Carrot", "Potato"];
+
+//[...]Spread operator method 
+let list1 = [... fruitsArr, "Berry", ...veggisArr];
+console.log(list1);
+/*
+[
+  'Apple',  'Banana',
+  'Cherry', 'Berry',
+  'Peas',   'Carrot',
+  'Potato'
+]
+*/
+
+// concat method
+let list2 = fruitsArr.concat(veggisArr);
+console.log(list2);                                  //[ 'Apple', 'Banana', 'Cherry', 'Peas', 'Carrot', 'Potato' ]
+
+
+// array.push(....another array) method = this will change the original array 
+let list3 = fruitsArr.push(...veggisArr);
+console.log(list3);                                   // 6 after adding array gives final length 
+console.log(fruitsArr);                              // [ 'Apple', 'Banana', 'Cherry', 'Peas', 'Carrot', 'Potato' ]
+
+
+//for of loop method
+
+for (let i=0 ; i<veggisArr.length; i++){
+    fruitsArr.push(veggisArr[i]);
+}
+console.log(fruitsArr);                                 // [ 'Apple', 'Banana', 'Cherry', 'Peas', 'Carrot', 'Potato' ]
+
+// splice method
+let colorList1 = ["Color1", "Color4"];
+let colorList2 = ["Color2", "Color3"];
+
+colorList1.splice(1,0,...colorList2);
+console.log(colorList1);                                // [ 'Color1', 'Color2', 'Color3', 'Color4' ]
+
 
 // bubble sort 
-// sorting diff methods 
+function bubbleSort(num){
+for (let i=0; i<num.length-1; i++){                      // i loop iterating over all elements until sorted 
+    for (let j=0; j< num.length-i; j++){                     // j loop compring adjecent values 
+        if(num[j] > num[j+1]){
+            [num[j], num[j+1]] = [num[j+1], num[j]];
+        }
+    }
+}
+return num;
+}
+console.log(bubbleSort([5,0,6,1,2,4]));               // [ 0, 1, 2, 4, 5, 6 ]
+
+
+//user input arrays 
+// Example 1
+const prompt= require('prompt-sync')();
+
+let subjectScores= [];
+
+let subjectOne= prompt("Enter your score for Subject1 : ");
+let subjectTwo= prompt("Enter your score for Subject2 : ");
+
+subjectScores.push(subjectOne);
+subjectScores.push(subjectTwo);
+
+console.log(subjectScores);                                   // [ '70', '85' ]
+
+
+// Example 2
+let colorPanel= [];
+for (let i=0 ; i<3 ; i++){
+let color = prompt("Enter the Color : ", i);
+colorPanel.push(color);
+}
+console.log(colorPanel);                                       // [ 'blue', 'green', 'purple' ]
+
 
 
 
