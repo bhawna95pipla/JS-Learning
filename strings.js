@@ -29,9 +29,9 @@ console.log(String);                                         // [Function: Strin
 console.log(objectString);                                   // [String: 'Name is Tim']
 
 
-//1. Finding Characters in string
 let sentence= "Hello World Bye";
 
+//1. Finding Characters in string
 // charAt(index) : find character at specific location
 console.log(sentence.charAt(1));                               // e
 
@@ -66,6 +66,26 @@ console.log(sentence.substring(-5));                             // Hello World 
 
 // substr(start, length): Extracts a part of a string starting at a specific index and stretching out for a set number of characters (the length)
 console.log(sentence.substr(3, 5));                              // lo Wo
+
+
+//5. Splitting and Cleaning
+//split(separator)Chops a string up into a collection of smaller strings based on a "separator" character you pick, and places them into an Array (a list)
+console.log(sentence.split(" "));                               // [ 'Hello', 'World', 'Bye' ]
+
+let stringList = " Apple, Mango, Cheery ";
+let list = stringList.split(","); 
+console.log(list);                                             // [ 'Apple', 'Mango', 'Cheery' ]
+
+//trim()Removes all invisible whitespace (spaces, tabs, newlines) from both the beginning and the end of a string. It does not touch spaces in the middle.
+let stringTwo= "  Remove  the  spacing  ";
+console.log(stringTwo.trim());                                  //"Remove  the  spacing"
+
+//trimStart()Removes whitespace only from the beginning (left side) of a string
+console.log(stringTwo.trimStart());                             //"Remove  the  spacing  "
+
+//trimEnd()Removes whitespace only from the end (right side) of a string.
+console.log(stringTwo.trimEnd());                             //"  Remove  the  spacing"
+
 
 
 

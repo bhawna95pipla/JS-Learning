@@ -87,7 +87,7 @@ let arr = [true, 25, "hello"];
 console.log(arr);                                     // [ true, 25, 'hello' ]
 
 
-//1 Sep
+///////1 Sep
 let fruitsList = ["Apple", "Banana", "Cherry", "Date", "Elderberry"];
 // slice
 console.log(fruitsList.slice(1,4));                               // [ 'Banana', 'Cherry', 'Date' ]
@@ -110,7 +110,7 @@ console.log(textSplit);                                       // [ 'Yellow', ' G
 let fruitsArr = ["Apple", "Banana", "Cherry"];
 let veggisArr = ["Peas", "Carrot", "Potato"];
 
-//[...]Spread operator method 
+//a. [...]Spread operator method 
 let list1 = [... fruitsArr, "Berry", ...veggisArr];
 console.log(list1);
 /*
@@ -122,25 +122,25 @@ console.log(list1);
 ]
 */
 
-// concat method
+//b. concat method
 let list2 = fruitsArr.concat(veggisArr);
 console.log(list2);                                  //[ 'Apple', 'Banana', 'Cherry', 'Peas', 'Carrot', 'Potato' ]
 
 
-// array.push(....another array) method = this will change the original array 
+//c.  array.push(....another array) method = this will change the original array 
 let list3 = fruitsArr.push(...veggisArr);
 console.log(list3);                                   // 6 after adding array gives final length 
 console.log(fruitsArr);                              // [ 'Apple', 'Banana', 'Cherry', 'Peas', 'Carrot', 'Potato' ]
 
 
-//for of loop method
+//d. for of loop method
 
 for (let i=0 ; i<veggisArr.length; i++){
     fruitsArr.push(veggisArr[i]);
 }
 console.log(fruitsArr);                                 // [ 'Apple', 'Banana', 'Cherry', 'Peas', 'Carrot', 'Potato' ]
 
-// splice method
+// e. splice method
 let colorList1 = ["Color1", "Color4"];
 let colorList2 = ["Color2", "Color3"];
 
@@ -148,7 +148,7 @@ colorList1.splice(1,0,...colorList2);
 console.log(colorList1);                                // [ 'Color1', 'Color2', 'Color3', 'Color4' ]
 
 
-// bubble sort 
+// bubble sort example
 function bubbleSort(num){
 for (let i=0; i<num.length-1; i++){                      // i loop iterating over all elements until sorted 
     for (let j=0; j< num.length-i; j++){                     // j loop compring adjecent values 
