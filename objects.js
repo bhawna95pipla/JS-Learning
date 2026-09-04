@@ -11,7 +11,7 @@ console.log(student1);
 // Output : { firstName: 'Alice', lastName: 'King', age: 26, isEmployeed: true }
 
 
-//b. Using new Object() Syntax : does exact same thing as literal method, but uses the standard built-in Object constructor. You create an empty object first, then add properties to it.
+//b.Empty Object() Syntax : does exact same thing as literal method, but uses the standard built-in Object constructor. You create an empty object first, then add properties to it.
 const car = new Object();
 
 //now adding properties to the empty object
@@ -48,7 +48,7 @@ console.log(firstName);                                        // Alice
 console.log(lastName);                                         // King 
 
 
-// 3. Object Methods : simply a function stored inside an object
+// 3. Object Methods: simply a function stored inside an object
 
 //a.  A Simple Object Method: Think of a dog. It has a name (noun), and it can bark (action)
 const dog = {
@@ -68,3 +68,55 @@ const light ={
     }
 };
 light.color();                                        // Switch ON, Color Yellow
+
+
+// Obejets with arrays 
+let bag ={
+    brand : "Nike",
+    color : "Blue",
+    pockets : 4,
+    itemsInside : ["Books", "Pen", "Notebook", "Lunch Box"]
+};
+console.log(bag.color);                                 // Blue
+console.log(bag.itemsInside);                           // [ 'Books', 'Pen', 'Notebook', 'Lunch Box' ]
+console.log(bag.itemsInside[2]);                        // Notebook
+console.log(bag.itemsInside.indexOf("Pen"));            // 1
+
+// deleting a property
+delete bag.pockets; 
+
+// adding new property
+bag.wheels = false; 
+
+console.log(bag);
+/*{
+  brand: 'Nike',
+  color: 'Blue',
+  itemsInside: [ 'Books', 'Pen', 'Notebook', 'Lunch Box' ],
+  wheels: false
+}*/
+
+
+//Objects inside objects with arrays Or Nested Objects 
+let laptop = {
+    brand : "HP",
+    model : "Model 2.0",
+    specs: {
+       storage : "126GB",
+       color   : "Silver",
+       screen  : "180 Degree",
+       installers : ["VPN", "Chrome", "Firefox", "Teams"]
+    }
+};
+
+console.log(laptop.brand);                                 // HP
+console.log(laptop.specs);                                 // { storage: '126GB', color: 'Silver', screen: '180 Degree' }
+console.log(laptop.specs[2]);                              // Undefined
+console.log(laptop.specs.screen);                          // 180 Degree
+console.log(laptop.specs.installers[1]);                   // Chrome
+console.log(laptop.specs.installers.indexOf("Firefox"));   // 2
+
+
+
+//let switch ="hello";
+//console.log(switch);           // error Unexpected token 'switch' bcoz switch is a reserved keyword

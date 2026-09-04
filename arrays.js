@@ -186,9 +186,24 @@ colorPanel.push(color);
 console.log(colorPanel);                                       // [ 'blue', 'green', 'purple' ]
 
 
+// Nested OR Mutlidimensional array
+ const shopping =[
+    ["pototo", "carrot", "peas","tomato"],
+    ["Milk", "cheese", "curd"],
+    ["Pen", "Book", "Marker", "Scale"]
+ ];
+console.log(shopping[0]);                              // [ 'pototo', 'carrot', 'peas', 'tomato' ]
+console.log(shopping[1]);                              // [ 'Milk', 'cheese', 'curd' ]
+console.log(shopping[2]);                              // [ 'Pen', 'Book', 'Marker', 'Scale' ]
+console.log(shopping[0][2]);                           // peas
+console.log(shopping[1][2]);                           // curd
+console.log(shopping[2][2]);                           // Marker 
 
+ 
+ 
+ 
 
-
+ 
 
 
 
