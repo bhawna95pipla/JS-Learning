@@ -1,4 +1,3 @@
-// Objects are variables that can store both values and functions.Values are stored as key:value pairs called properties.
 //1. Creating Objects ........
 
 //a. Object Literal (The Simplest Way): You simply use curly braces {} and list your properties inside.
