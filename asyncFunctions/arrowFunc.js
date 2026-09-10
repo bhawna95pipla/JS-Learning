@@ -68,7 +68,8 @@ const user = {
 console.log(user.userName());                                   // John
 
 
-// arrow functione with this keyword 
+// arrow functione with this keyword : Arrow functions do not have their own this value.
+// They inherit this from the surrounding code.
 const user2 = {
   name: "John",
   age : 30,
