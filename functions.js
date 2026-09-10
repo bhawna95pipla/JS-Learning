@@ -87,6 +87,43 @@ console.log(buildString(500));                     // Hello 500
 console.log(buildString("500"));                   // Hello 500
 
 
+// Function with return & with argument 
+function multiply(num1 , num2){
+    return num1 * num2;
+}
+let multiplyResult = multiply(5, 10);
+console.log(multiplyResult);                             // 50 
+
+
+// Function with return & without argument 
+function greet(){
+    return "Hello";
+}
+
+let greetMessage = greet();
+console.log(greetMessage);                                // Hello
+
+
+// Function without return & with argument 
+function morningCall(username){
+    console.log("Good Morning!!" + username + ", wake up");       // Good Morning!!Bhawna, wake up
+};
+
+morningCall("Bhawna");
+
+
+//Function without return & with argument 
+
+function battery(){
+    console.log("Battery is Low, Plug in Charger now!!!!");       // Battery is Low, Plug in Charger now!!!!
+};
+battery();
+
+
+
+
+
+
 
 
 
