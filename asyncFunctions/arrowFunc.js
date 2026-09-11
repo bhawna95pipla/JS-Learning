@@ -80,7 +80,7 @@ const user2 = {
 console.log(user2.userName());                                   // undefined
 
 
-// Arrow function with return & argument combo
+// Arrow function return & argument combinations
 // Arrow Function with return & with argument 
 const multiply=(num1 , num2)=> num1 * num2
 console.log(multiply(5,10));                             // 50 
