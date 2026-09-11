@@ -80,6 +80,34 @@ const user2 = {
 console.log(user2.userName());                                   // undefined
 
 
+// Arrow function with return & argument combo
+// Arrow Function with return & with argument 
+const multiply=(num1 , num2)=> num1 * num2
+console.log(multiply(5,10));                             // 50 
+
+
+// Arrow Function with return & without argument 
+const greet = () => "Welcome";
+console.log(greet());                                    // Welcome
+
+
+// Arrow Function without return & with argument 
+const morningCall= username => console.log("Good Morning!!" + username + ", wake up");
+morningCall("Bhawna");                                    // Good Morning!!Bhawna, wake up
+
+
+// Arrow Function without return & with argument 
+const battery= () => console.log("Battery is Low, Plug in Charger now!!!!");
+battery();                                                // Battery is Low, Plug in Charger now!!!!
+
+// Arrow function with multiple statement in one line then we have use return statement & curly braces
+const addition = (a,b,c) => {const result= a+b+c; return result};
+console.log(addition(10,20,30));                          // 60
+
+// mutliple code lines in one line 
+//const addition = (a,b,c) => const result= a+b+c; return result;
+//console.log(addition(10,20,30));                          // Syntax error: Identifier 'addition' has already been declared
+
 
 
 
