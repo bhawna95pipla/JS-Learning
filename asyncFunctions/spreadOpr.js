@@ -47,7 +47,7 @@ const userInfo = ["Jane" , "Doe", "Doctor"];
 greetUser(...userInfo);                                  // Hello, Jane Doe, Your role is : Doctor
 
 
-//4. Shallow Copying : used in case of nested arrays, objects 
+//4. Shallow Copying : used in case of nested arrays, objects , this also changes orignal array/object 
 
 const nestedObj = {name : "Snape" , age : 50 , Skills :{ role : "teacher"}};
 const copyObj = {...nestedObj};
@@ -57,6 +57,23 @@ copyObj.Skills.role = "VP";
 console.log(copyObj);                                     // { name: 'Snape', age: 50, Skills: { role: 'VP' } }
 console.log(nestedObj);                                   // { name: 'Snape', age: 50, Skills: { role: 'VP' } }
 
+
+// 5. Deep copy 
+// JS has a built-in tool called structuredClone() that makes a perfect, independent copy of your data
+// in Deep copying changing copy never changes anything in original array /objects.....
+
+const original = {
+  name: "Sam",
+  details: {
+    age: 25,
+    city: "Delhi" 
+  }
+};
+const deepCopy = structuredClone(original);
+deepCopy.details.city = "Mumbai";
+
+console.log(original.details.city);                             // Delhi
+console.log(deepCopy.details.city);                             // Mumbai
 
 
 
