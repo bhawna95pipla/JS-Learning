@@ -116,3 +116,44 @@ console.log(futureYear.next().value.toDateString());                  // Tue Sep
 
 
 
+// date generator with generator function
+
+function* dateResult() {
+  while (true) {
+    const type = yield;                                    // The engine pauses here, waiting for an input
+    const date = new Date();                               // Creates a fresh date instance on each loop iteration
+
+    switch (type) {
+      case "random": 
+        const start = new Date(2020, 0, 1).getTime();
+        const end = new Date(2027, 0, 1).getTime();
+        yield new Date(start + Math.random() * (end - start));
+         
+      
+      case "4months": 
+        date.setMonth(date.getMonth() + 4); 
+        yield date;
+        
+      
+      case "6years": 
+        date.setFullYear(date.getFullYear() + 6); 
+        yield date;
+        break; 
+      
+    }
+  }
+}
+
+const finalDate = dateResult();
+finalDate.next();                                                    // "Start running the code and pause at the first yield so that it is ready to receive a value."
+
+console.log(finalDate.next("random").value.toDateString());           // Sun Dec 06 2020
+console.log(finalDate.next("4months").value.toDateString());          // Sun Jan 17 2027
+console.log(finalDate.next("6years").value.toDateString());           // Mon Jan 17 2033
+
+
+
+
+
+
+
