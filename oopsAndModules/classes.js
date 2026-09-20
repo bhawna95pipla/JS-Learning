@@ -82,6 +82,7 @@ Water is Boiling....
 Coffee is brewing....
 Coffee is Ready!!
 */
+//machine.#brewCofee();                             //SyntaxError: Private field '#brewCofee' must be declared in an enclosing class
 
 
 // C.) Inheritance (Code Reuse) :  allows you to create a new class (child) that inherits all the properties 
@@ -110,6 +111,10 @@ myPet.play();                                                // Bruno is playing
 
 // D.) Polymorphism (Many Forms) :  "many shapes." It allows different classes to have the same method name but execute them with different behaviors.
 
+//1. Subtype Polymorphism (Method Overriding)
+//It occurs when a child class or a prototype provides a specific implementation of a method that is already 
+// defined in its parent class. JavaScript resolves this at runtime.
+
 class Animals{
 makeSound(){
     console.log("Animals sounds");
@@ -127,4 +132,68 @@ class Bird extends Animals{
 }
 
 const sound = [new Cat(), new Bird()];
-sound.forEach(animal => animal.makeSound());                        // Meow!!  // Chirp....
+sound.forEach(animal => animal.makeSound());   
+/*
+Meow!!
+Chirp....
+*/
+
+// 2. Ad-hoc Polymorphism (Method Overloading)
+// Ad-hoc polymorphism occurs when a single function behaves differently based on the type or number of 
+// arguments passed to it.
+
+class Calculator{
+    add(a,b){
+        if(typeof a === 'string' || typeof b === 'string'){
+            return `${a}${b}`;
+        }
+        return a + b 
+    }
+}
+const cal = new Calculator();
+
+console.log(cal.add("ab", "cd"));                        // abcd
+console.log(cal.add(10, 5));                             // 15
+console.log(cal.add("10", 5));                           // 105
+console.log(cal.add(10, "55"));                          // 1055
+
+
+// Example of Ploymorphism 
+
+
+class Pet{
+    eat(){
+        console.log("Food:");
+    }
+}
+
+class Rabbit extends Pet{
+    eat(){
+        super.eat();
+        console.log("Rabbit eats carrot");    
+    }
+}
+class Hamster extends Pet{
+    eat(){
+        super.eat();
+        console.log("Hamster eats leaf");    
+    }
+}
+const food = [new Rabbit(), new Hamster()];
+food.forEach(pet => pet.eat());
+/*
+Food:
+Rabbit eats carrot
+Food:
+Hamster eats leaf
+*/
+
+
+
+
+
+
+
+
+
+
