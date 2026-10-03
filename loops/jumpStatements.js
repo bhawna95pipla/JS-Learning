@@ -24,7 +24,7 @@ for( i=1;i<=10;i++)
      } 
 };
 console.log("value of i is", i );
-// output : i=11
+// output : will print 1- 10 & vlaue of i outof loop i=11
 
 
 // Continue Statement :  It aborts only the current turn of the loop, skips any remaining lines of code 

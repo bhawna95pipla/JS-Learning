@@ -22,9 +22,9 @@ let x1 = "Hello";
 let x2 = "How are you";
 let x3 = 25;
 
-console.log("New Message!!", x1 +','+ x2);
-console.log("String & Number", x2 +'? '+ x3);
-console.log("New Message Again!!", x1 += x2);
+console.log("New Message!!", x1 +','+ x2);                      // New Message!! Hello,How are you
+console.log("String & Number", x2 +'? '+ x3);                   // String & Number How are you? 25
+console.log("New Message Again!!", x1 += x2);                   // New Message Again!! HelloHow are you
 
 
 // Comparison Operators 
@@ -54,7 +54,7 @@ console.log(5 < "Hello");                // false
 console.log(5 > "Hello");                // false
 
 console.log(5 == "Hello");                // false
-console.log("2" < "12");                // false : tring are compared character by character & here 2 is greater than 1
+console.log("2" < "12");                // false : string are compared character by character & here 2 is greater than 1
 
 console.log("2" > "12");                // true : here 2 is greater than 1 so result is true 
 console.log("2" == "12");                // false : becuase 2 is not equals to 1 
@@ -203,9 +203,11 @@ console.log(+age1);                        // Output: 25 (as a number)
 
 console.log(+true);                        // Output: 1
 
+
 //  Unary Negation (-) : Converts the value to a number and changes its sign (+ to - or vice versa)
 let speed = "60";
 console.log(-speed);                       // Output: -60
+
 
 //Increment (++) & Decrement (--) : Adds or subtracts 1 from a variable
 
@@ -219,7 +221,8 @@ console.log(step--);                       // 7 then decrease to 6
 
 console.log(--step);                       // 5
 
-// Logical Not(!) : everse the result from actual result 
+
+// Logical Not(!) : Reverse the result from actual result 
 let t1 = !(5 === 5);
 console.log(t1);                    // false
 
@@ -291,8 +294,10 @@ console.log(-5 >>> 2);                                  // Output: 1073741822 (S
 //Practice 
 
 let q1=2;
-let q2= q1++ + ++q1;        // here 2nd ++ works 2+3=5
-console.log(q2);            // 1 will be added at this point for1st q1++ from above so q2=6
+
+let q2= q1++ + ++q1;        // here ++q1 works 2+3=5
+console.log(q2);            // 1 will be added at this point for 1st q1++ from above so q2=6
+
 q2=--q1 + q1--;             // here q1 now has value 4 , 1st -- value gives 3 + value4    q2=7
 console.log(q2);            // here 2nd -- will work so final value q2 =6
 

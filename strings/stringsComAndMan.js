@@ -20,7 +20,7 @@ console.log(word1 === word3);                                 // false
 
  //2. Case-Insensitive Comparison : To compare two strings without worrying about capitalization, convert both to lowercase first using .toLowerCase()
  let text1 = "Hello, How Are You??";
- let text2 = "hello, how are you??";
+ let text2 = "hello, How arE you??";
  
  let compare = text1.toLowerCase() === text2.toLowerCase();
  console.log(compare);                                     // true 
@@ -36,7 +36,7 @@ let newText2 = text3.replaceAll("blue", "green");
 console.log(newText2);                                      // I like color green and green
 
 
-// 4. Concatenating StringsConcatenation simply means adding strings together
+// 4. Concatenating : Strings Concatenation simply means adding strings together
  let firstName = "John";
  let lastName = "Wick";
 

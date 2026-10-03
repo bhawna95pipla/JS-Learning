@@ -75,7 +75,7 @@ console.log("10" - 5);                                      // 5     (JS convert
 console.log(10 - "5");                                      // 5     (JS converts "5" to 5)
 console.log("10" - "5");                                    // 5     (Both are converted to numbers)
 console.log("Ten" - 5);                                     // Nan   (text can't be converted to number)
-console.log(10 - true);                                     // 9
+console.log(10 - true);                                     // 10-1= 9 
 console.log(10 - "true");                                   // Nan
 console.log(true - 10);                                     // -9 
 console.log(10 - false);                                    // 10-0= 10

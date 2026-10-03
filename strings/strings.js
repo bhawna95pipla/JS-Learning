@@ -24,7 +24,9 @@ This is line 2
 
 //new String() Constructor 
 let objectString= new String("Name is Tim");
-console.log(String);                                         // [Function: String] Reason : Here, asked to log the standard built-in String object constructor, which is inherently a function. Therefore, the console prints its identity:
+console.log(String);               
+// [Function: String] Reason : Here, asked to log the standard built-in String object constructor, 
+// which is inherently a function. Therefore, the console prints its identity:
 
 console.log(objectString);                                   // [String: 'Name is Tim']
 

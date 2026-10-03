@@ -53,7 +53,7 @@ for(let i=0; i<fruits.length; i+=2){
 };                                                     //apple pineapple
 
 //Example 3
-for(let i=1; i<fruits.length; i+=2){
+for(let i=1; i<fruits.length; i+=1){
     console.log(fruits[i]);
 };                                                      // mango banana
 
