@@ -135,7 +135,7 @@ constructor(brand, color){
     this.color = color;
 }
 
-static createKia(){                           //Cant make a constructor static, but can call constructor from a static method to retunr a new object
+static createKia(){                           //Cant make a constructor static, but can call constructor from a static method to return a new object
 return new EV("Kia", "Black");
 }
 }
@@ -145,7 +145,7 @@ console.log(myCar.brand);                     // Kia
 console.log(myCar.color);                     // Black 
 
 
-//A.) No constructor added JS will add epmty default constructor 
+//A.) No constructor added JS will add empty default constructor 
 
 //B.) Constructor with NO argument  
 // These constructors do not take any inputs. Every object created from this class will start with the 
