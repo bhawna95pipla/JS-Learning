@@ -1,3 +1,5 @@
+// The ... operator can be used to join arrays:
+
 // 1. Spread with Arrays 
 
 // A. Copying an Array

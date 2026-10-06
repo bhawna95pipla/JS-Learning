@@ -1,4 +1,5 @@
-// The Map Object : Map is an object that can store collections of key-value pairs.Maps differ from standard objects in that keys can be of any data type.
+// The Map Object : Map is an object that can store collections of key-value pairs.
+// Maps differ from standard objects in that keys can be of any data type.
 
 // 1. Passing an existing Array to the new Map() constructor
 const myMap = new Map([

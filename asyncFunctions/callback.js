@@ -53,7 +53,7 @@ function timeUp(){
 };
 
 setTimeout(timeUp, 3000);
- console.log("This will run 1st before timeUp");    //  runs 1st : his will run 1st before timeUp
+ console.log("This will run 1st before timeUp");    //  runs 1st : this will run 1st before timeUp
 
 
 //1. Callback function with return & with argument

@@ -1,6 +1,7 @@
 //1. iterables 
 //  An iterable is anything that can be looped over using a for...of loop.
-// Arrays, Strings, Sets , Maps & object is considered iterable if it has a special hidden method (Symbol.iterator) that knows how to spit out its values.
+// Arrays, Strings, Sets , Maps & object is considered iterable if it has a special hidden method 
+// (Symbol.iterator) that knows how to spit out its values.
 
 const toys = ["car", "ball", "bat"];
 for( const toy of toys){
@@ -15,6 +16,11 @@ bat
 // 2. Iterator 
 // is an object that provides a standard way to access elements sequentially.
 // it must adheres to the Iterator Protocol: It must have a next() method.
+
+// The next() method returns an object with two properties:
+// The value property holds the next value in the iteration sequence.
+// The done property returns false if there are more elements to iterate over, otherwise it returns true.
+
 
 // A. build in array iterator
 const fruits = ["apple", "banana", "mango", "grapes"];
@@ -57,6 +63,12 @@ JS Function can only return one value.
 JS Generator can return multiple values, one by one.
 JS Generator can yield a stream of data.
 JS Generator can be paused and resumed.
+A Generator Function is defined using the function* syntax
+
+yield keyword pauses execution and yield a value back to the caller.
+The generator's state is preserved, and can be resumed from the point of the yield when next() is called.
+Generators maintain their internal state between yield calls, allowing them to continue execution from 
+where they left off.
 */
 
 function* stepsList(){

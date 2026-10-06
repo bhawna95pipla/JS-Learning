@@ -1,4 +1,4 @@
-//arrow functions () => {} is the modern & shorter way to write functions in JS , we cna skip function keyword
+//arrow functions () => {} is the modern & shorter way to write functions in JS , we can skip function keyword
 // Arrow functions are always expressions and must be assigned to a variable.
 // return & curly can be skipped when function has only one statement to return 
 // If a function has only one parameter, you can omit/remove the parentheses:
@@ -42,7 +42,7 @@ console.log(doubleFour(20));                                 // 40
 // !! Paranthesis can't be removed with multiple arguments
 // !! can remove the curly braces {} and the return statement for multiple arguments if the function fits on a single line. This is called an implicit return.
 
-// With long way retune statement & braces
+// With long way return statement & braces
 const addOne = (num1, num2)=>{
     return num1 + num2;
 };
@@ -69,7 +69,7 @@ console.log(user.userName());                                   // John
 
 
 // arrow functione with this keyword : Arrow functions do not have their own this value.
-// They inherit this from the surrounding code.
+// They inherit this from the surrounding code where they were defined.
 const user2 = {
   name: "John",
   age : 30,
@@ -81,12 +81,13 @@ console.log(user2.userName());                                   // undefined
 
 
 // Arrow function return & argument combinations
-// Arrow Function with return & with argument 
+
+// Arrow Function with implicit return & with argument 
 const multiply=(num1 , num2)=> num1 * num2
 console.log(multiply(5,10));                             // 50 
 
 
-// Arrow Function with return & without argument 
+// Arrow Function with implicit return & without argument 
 const greet = () => "Welcome";
 console.log(greet());                                    // Welcome
 
@@ -96,7 +97,7 @@ const morningCall= username => console.log("Good Morning!!" + username + ", wake
 morningCall("Bhawna");                                    // Good Morning!!Bhawna, wake up
 
 
-// Arrow Function without return & with argument 
+// Arrow Function without return & without argument 
 const battery= () => console.log("Battery is Low, Plug in Charger now!!!!");
 battery();                                                // Battery is Low, Plug in Charger now!!!!
 

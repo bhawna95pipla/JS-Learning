@@ -1,3 +1,9 @@
+// Set is collection of unique values .Each value can only occur once in a Set.
+//The values can be of any type, primitive values or objects.
+// Sets are objects
+
+
+// How to create a Set
 // 1. Create a set with Passing an array to new Set() : Pass an array to the new Set() constructor:
 const characters = new Set(["ab", "cd", "ef"]);
 console.log(characters);                                   // Set(3) { 'ab', 'cd', 'ef' }
