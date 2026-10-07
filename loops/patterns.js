@@ -49,7 +49,7 @@ for (let i = z - 1; i >= 1; i--) {
     console.log();
 };
 
-// Diamond shapw with 5 lines 
+// Diamond shape with 5 lines 
 let line = 5;
 for(i=1; i<=line; i++)
 {
