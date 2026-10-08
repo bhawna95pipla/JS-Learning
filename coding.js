@@ -1,5 +1,8 @@
 console.log(undefined);                                // undefined
+console.log(typeof undefined);                         // undefined
+
 console.log(null);                                     // null
+console.log(typeof null);                              // object
 
 
 
@@ -229,7 +232,7 @@ finally{
 
 try{
     console.log(pen);
-    throw new error("No pen available")
+    throw new Error("No pen available")
 }
 finally{
     console.log("finally....")
@@ -273,7 +276,7 @@ SyntaxError: Unexpected token 'finally'   when 2 finally are added
 */
 
 
-// try with 1 catch & 2 throe , 1 finally
+// try with 1 catch & 2 throw , 1 finally
 
 try{
     console.log(car);

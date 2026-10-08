@@ -112,7 +112,7 @@ function morningCall(username){
 morningCall("Bhawna");
 
 
-//Function without return & with argument 
+//Function without return & without argument 
 
 function battery(){
     console.log("Battery is Low, Plug in Charger now!!!!");       // Battery is Low, Plug in Charger now!!!!

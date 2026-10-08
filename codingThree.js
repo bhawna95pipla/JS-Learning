@@ -12,7 +12,7 @@ for(i=str.length-1; i>=0 ; i--){
 console.log(reverse);                            // kcab emoclew & olleH [revrser string & every word in string also]
 
 
-// reverse the string wiht single word
+// reverse the string with single word
 let string = "Hello";
 let reverseStr = "";
 
@@ -69,7 +69,7 @@ console.log(newStr4);                             // HellO WorlD FroM JavascripT
 let word = "level";
 let revWord = "";
 
-for (i=word.length-1; i>=0 ; i--){
+for (let i=word.length-1; i>=0 ; i--){
     revWord += word[i];
 }
 if(word === revWord){
@@ -119,8 +119,8 @@ for (let c of line3){
     if(/[a-z]/i.test(c))
         count3++;
 }
- console.log(count3);
-
+ console.log(count3);                                        // 17 
+ 
 
  // occurance of a particular letter in a string 
 
