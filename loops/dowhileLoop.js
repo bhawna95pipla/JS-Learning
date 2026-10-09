@@ -14,4 +14,4 @@ do{
     console.log(num);
     num--;
 } while(num<6);
-// output : 10 after that loop will stop coz 10<5 failed loop
+// output : 10 after that loop will stop coz 10<6 failed loop

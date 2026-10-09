@@ -5,7 +5,7 @@
 let str = "Hello & welcome back";
 let reverse = "";
 
-for(i=str.length-1; i>=0 ; i--){
+for(let i=str.length-1; i>=0 ; i--){
     reverse = reverse + str[i];
 }
 
@@ -16,7 +16,7 @@ console.log(reverse);                            // kcab emoclew & olleH [revrse
 let string = "Hello";
 let reverseStr = "";
 
-for(i=string.length-1; i>=0 ; i--){
+for(let i=string.length-1; i>=0 ; i--){
     reverseStr = reverseStr + string[i];
 }
 

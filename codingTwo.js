@@ -152,7 +152,7 @@ let weather =new Promise((resolve,reject)=> {
         reject("It's sunny outside")
     }
 });
-weather
+weather()
 .then((message) => {console.log(message);})
 .catch((error) => {console.log(error);})
 .finally(()=> {console.log("Let's play outside anyway");})
