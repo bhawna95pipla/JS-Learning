@@ -62,3 +62,48 @@ else{
 }
 
 
+//5. Check Whether Two Strings Are Anagrams with other method
+
+
+let str6 = "Bhawna Pipla";
+
+//6. reversing whole string alos with changing word order
+
+let reverse1= "";
+
+for(let i=str6.length-1; i>=0 ; i--){
+    reverse1 = reverse1 + str6[i];
+}
+console.log(reverse1);                // alpiP anwahB
+
+
+//7. reverse the wordd order only
+
+let newStr6 = str6.split(" ");
+
+let temp = newStr6[0];
+newStr6[0] = newStr6[1];
+newStr6[1] =temp;
+
+console.log(newStr6.join(" "));               // Pipla Bhawna
+
+
+//8. revser only letters in word & not change words order
+let word2 = str6.split(" ");
+let reverseWord2= "";
+
+for(let i=0; i< word2.length; i++){
+    for(let j=word2[i].length-1; j>=0; j--){
+           reverseWord2 = reverseWord2 + word2[i][j];
+    } 
+    reverseWord2 += " ";
+}
+console.log(reverseWord2);                    // anwahB alpiP 
+
+
+
+
+
+
+
+
